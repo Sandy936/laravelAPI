@@ -47,6 +47,7 @@ class AuthController extends Controller
             'password' => 'required|string'
         ]);
 
+        $token = '';
        // Check email
        $user = User:: where('email',$fields['email'])
                     -> where('verified',1)
